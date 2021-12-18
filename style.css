@@ -1,0 +1,241 @@
+/* ------------------- */
+/* GENERAL SETUP */
+/* ------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+/* ------------------- */
+/* GLOBAL ELEMENTS */
+/* ------------------- */
+
+/* TYPOGRAPHY */
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    grid-column: 1 / -1;
+    margin-bottom: 7rem;
+}
+
+.subtitle-copy {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.description-copy {
+    font-size: 1.8rem;
+    font-weight: 200;
+    line-height: 1.4;
+}
+
+/* HELPER CLASSES */
+
+.margin-bottom-sm {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4rem;
+}
+
+.margin-top-sm {
+    margin-top: 2rem;
+}
+
+/* LINKS */
+
+.link:link, .link:visited {
+    margin-top: 3rem;
+    text-decoration: none;
+    color: #FEAB45;
+    font-size: 2rem;
+    font-weight: 100;
+    border-bottom: 1px solid currentColor;
+}
+
+.link:hover, .link:active {
+    color: #cb8937;
+}
+
+/* ------------------- */
+/* HERO SECTION */
+/* ------------------- */
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 30rem;
+}
+
+.main-nav-name {
+    font-size: 2rem;
+    letter-spacing: 3.6px;
+    margin-bottom: 0.8rem;
+}
+
+.main-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    list-style: none;
+    font-size: 1.8rem;
+}
+
+.main-nav-link:link, .main-nav-link:active {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1.2px;
+}
+
+.main-nav-link:hover, .main-nav-link:visited {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #fff;
+}
+
+.section-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/josh-taylor-MK8QGCRduyI-unsplash.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-intro {
+    font-size: 7rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+.typing {
+    position: relative;
+}
+
+.typing::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 90%;
+    border-right: 2px solid #fff;
+    right: -1rem;
+    animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ------------------- */
+/* SKILLS SECTION */
+/* ------------------- */
+
+.section-skills {
+    padding: 12rem 6rem 16rem 6rem;
+    background-color: #0A0A0C;
+    color: #fff;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 3rem;
+}
+
+.skills-box {
+    padding: 3rem 2rem;
+    border-radius: 9px;
+    border: 2px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.skills-box:hover {
+    background-color: #FEAB45;
+}
+
+.icon-small {
+    font-size: 4rem;
+    color: #FEAB45;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+}
+
+.icon-big {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 16rem;
+    color: #FEAB45;
+    opacity: 0.1;
+}
+
+.skills-box:hover .icon-small{
+    color: #fff;
+}
+
+
+.skills-box:hover .icon-big{
+    color: #fff;
+}
+
+/* ------------------- */
+/* EXPERIENCE SECTION */
+/* ------------------- */
+
+.section-experience {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    background-color: #0A0A0C;
+    color: #fff;
+}
+
+.experience-left img {
+    width: 100%;
+}
+
+.experience-right {
+    padding: 5rem 0;
+}
+
+.experience-box {
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+    margin-bottom: 2rem;
+}
+
+.duration-label {
+    display: inline-block;
+    background-color: #FEAB45;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 2px;
+    font-size: 1.2rem;
+}
