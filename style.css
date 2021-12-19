@@ -59,14 +59,22 @@ body {
     margin-top: 2rem;
 }
 
+.margin-top-md {
+    margin-top: 4rem;
+}
+
+.line-height {
+    line-height: 1.1;
+}
+
 /* LINKS */
 
 .link:link, .link:visited {
-    margin-top: 3rem;
     text-decoration: none;
     color: #FEAB45;
     font-size: 2rem;
     font-weight: 100;
+    transition: all 0.3s;
     border-bottom: 1px solid currentColor;
 }
 
@@ -128,11 +136,11 @@ body {
     text-align: center;
 }
 
-.typing {
+.txt-type {
     position: relative;
 }
 
-.typing::after {
+.txt-type::after {
     content: '';
     position: absolute;
     width: 1px;
@@ -223,7 +231,7 @@ body {
 }
 
 .experience-right {
-    padding: 5rem 0;
+    padding: 5rem 2rem 5rem 1rem;
 }
 
 .experience-box {
@@ -239,3 +247,81 @@ body {
     border-radius: 2px;
     font-size: 1.2rem;
 }
+
+/* ------------------- */
+/* BLOG SECTION */
+/* ------------------- */
+
+.section-blog {
+    background-color: #0A0A0C;
+    color: #fff;
+}
+
+.text-container {
+    padding: 6rem 6rem 4rem 6rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.blog-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-title, .card-description {
+    position: absolute;
+    padding: 2rem 4rem;
+}
+
+.blog-card .card-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    bottom: 2rem;
+    transition: all 0.4s;
+}
+
+.blog-card:hover .card-title {
+    bottom: 10rem;
+}
+
+.blog-card .bottom-border {
+    height: 2px;
+    width: 6rem;
+    background: #FEAB45;
+    position: absolute;
+    bottom: 6rem;
+    left: 4rem;
+    transition: all 0.4s;
+}
+
+.blog-card:hover .bottom-border {
+    width: 18rem;
+    bottom: 14rem;
+}
+
+.blog-card .card-description {
+    opacity: 0;
+    font-size: 1.8rem;
+    font-weight: 200;
+    bottom: 5rem;
+    transition: all 0.3s;
+}
+
+.blog-card:hover .card-description {
+    opacity: 1;
+}
+
+.blog-card img {
+    width: 100%;
+    filter: brightness(38%);
+    transition: all 0.3s;
+}
+
+.blog-card img:hover {
+    transform: scale(1.1);
+}
+
