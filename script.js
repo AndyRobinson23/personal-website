@@ -29,7 +29,25 @@ TypeWriter.prototype.type = function() {
     // Insert txt into element
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-    setTimeout(() => this.type(), 500)
+    // Initial type speed
+    let typeSpeed = 300;
+    if(this.isDeleting) typeSpeed /= 3;
+
+    // If word is complete
+    if(!this.isDeleting && this.txt === fullTxt) {
+        // Create pause at end
+        typeSpeed = this.wait;
+        // Set delete to true
+        this.isDeleting = true;
+    } else if(this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        // Move to next word
+        this.wordIndex++;
+        // Pause before start typing
+        typeSpeed = 500;
+    }
+
+    setTimeout(() => this.type(), typeSpeed);
 }
 
 // Init on DOM load
@@ -44,31 +62,6 @@ function init() {
     // Init Typewriter
     new TypeWriter(txtElement, words, wait);
 }
-
-
-// const texts = ['Product Owner', 'Project Manager'];
-// let count = 0;
-// let index = 0;
-// let currentText = '';
-// let letter = '';
-
-// // IIFE to call the function immediately
-// (function type() {
-//     if(count === texts.length) {
-//         count = 0;
-//     }
-
-//     currentText = texts[count];
-//     letter = currentText.slice(0, ++index)
-
-//     document.querySelector('.typing').textContent = letter;
-//     if(letter.length === currentText.length) {
-//         count++;
-//         index = 0;
-//     };
-
-//     setTimeout(type, 300);
-// }());
 
 
 ////////////////////////////////
