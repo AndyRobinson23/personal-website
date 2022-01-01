@@ -109,13 +109,13 @@ body {
     font-size: 1.8rem;
 }
 
-.main-nav-link:link, .main-nav-link:active {
+.main-nav-link:link, .main-nav-link:visited {
     text-decoration: none;
     color: #fff;
     letter-spacing: 1.2px;
 }
 
-.main-nav-link:hover, .main-nav-link:visited {
+.main-nav-link:hover, .main-nav-link:active {
     padding-bottom: 3px;
     border-bottom: 1px solid #fff;
 }

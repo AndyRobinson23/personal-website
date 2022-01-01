@@ -30,8 +30,8 @@ TypeWriter.prototype.type = function() {
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
     // Initial type speed
-    let typeSpeed = 300;
-    if(this.isDeleting) typeSpeed /= 3;
+    let typeSpeed = 200;
+    if(this.isDeleting) typeSpeed /= 3.5;
 
     // If word is complete
     if(!this.isDeleting && this.txt === fullTxt) {
