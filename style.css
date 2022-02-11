@@ -255,6 +255,7 @@ body {
 .section-blog {
     background-color: #0A0A0C;
     color: #fff;
+    padding-top: 5rem;
 }
 
 .text-container {
@@ -325,3 +326,46 @@ body {
     transform: scale(1.1);
 }
 
+/* ------------------- */
+/* CONTACT SECTION */
+/* ------------------- */
+
+.section-contact {
+    background-color: #0A0A0C;
+    color: #fff;
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+.flex-container {
+    display: flex;
+    gap: 15rem;
+}
+
+.contact-left {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.form input {
+    background-color: #0A0A0C;
+    border-radius: 5px;
+    border: 2px solid rgba(255,255,255,0.05);
+    padding: 1rem;
+    color: #fff;
+    width: 70%;
+}
+
+.form input:last-of-type {
+    padding-bottom: 12rem;
+}
+
+.form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1rem rgb(254, 171, 69);
+}
