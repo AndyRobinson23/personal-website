@@ -82,6 +82,21 @@ body {
     color: #cb8937;
 }
 
+/* BUTTONS */
+
+.btn {
+    background-color: #0A0A0C;
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 9px;
+    border: 2px solid rgba(255,255,255,0.05);
+    transition: all 0.3s;
+}
+
+.btn:hover, .btn:active {
+    background-color: #FEAB45;
+}
+
 /* ------------------- */
 /* HERO SECTION */
 /* ------------------- */
@@ -338,10 +353,14 @@ body {
 
 .flex-container {
     display: flex;
-    gap: 15rem;
+    gap: 14rem;
 }
 
 .contact-left {
+    width: 100%;
+}
+
+.contact-right {
     width: 100%;
 }
 
@@ -349,7 +368,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .form input {
@@ -358,7 +377,7 @@ body {
     border: 2px solid rgba(255,255,255,0.05);
     padding: 1rem;
     color: #fff;
-    width: 70%;
+    width: 80%;
 }
 
 .form input:last-of-type {
