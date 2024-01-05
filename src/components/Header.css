@@ -1,0 +1,65 @@
+.section-header {
+  position: relative;
+}
+
+.main-nav {
+  display: none;
+}
+
+.icons {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  z-index: 999;
+}
+
+.mobile-nav {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  z-index: 98;
+  display: block;
+  background-color: goldenrod;
+  transform-origin: top;
+}
+
+.mobile-nav-list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+  list-style: none;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  .main-nav {
+    display: block;
+  }
+
+  .main-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 6rem;
+  }
+
+  .main-nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .icons {
+    display: none;
+  }
+}
