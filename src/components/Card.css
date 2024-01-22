@@ -1,0 +1,42 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skills-box {
+  padding: 2rem;
+  border-radius: 9px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.icon-small {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  /* styles to achieve the gradient in the icons */
+  color: transparent;
+  background: linear-gradient(62deg, #f9955c 0%, #f6c74f 100%);
+  -webkit-background-clip: text;
+}
+
+.icon-big {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 7rem;
+  color: #e4505d;
+  opacity: 0.1;
+}
+
+.flex {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.chevron {
+  font-size: 1.4rem;
+}

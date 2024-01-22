@@ -1,0 +1,49 @@
+.section-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero__bg--1 {
+  position: absolute;
+  top: 0rem;
+  right: 5rem;
+  height: 29vh;
+  width: 100%;
+  background: linear-gradient(319deg, #ba2d0b 0%, #fe7f2d 37%, #ffbf46 100%);
+  filter: blur(100px);
+  opacity: 0.8;
+}
+
+.hero__bg--2 {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  height: 35vh;
+  width: 50vw;
+  border-radius: 50%;
+  background: linear-gradient(62deg, #f9955c 0%, #f6c74f 100%);
+  filter: blur(80px);
+  transform: rotate(-25deg);
+  opacity: 0.5;
+}
+
+.hero__text--intro {
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.hero__text--line2 {
+  font-weight: 200;
+  font-size: 3rem;
+}
+
+.hero__text--job-titles {
+  font-weight: 200;
+  font-size: 3rem;
+}
