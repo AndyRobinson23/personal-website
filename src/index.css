@@ -32,8 +32,16 @@ html {
   margin-bottom: 1rem;
 }
 
+.u-margin-bottom-md {
+  margin-bottom: 2rem;
+}
+
 .u-margin-top-sm {
   margin-top: 1rem;
+}
+
+.u-padding-top-md {
+  margin-top: 2rem;
 }
 
 /***************/

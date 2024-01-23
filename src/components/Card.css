@@ -18,15 +18,15 @@
   margin-bottom: 2rem;
   /* styles to achieve the gradient in the icons */
   color: transparent;
-  background: linear-gradient(62deg, #f9955c 0%, #f6c74f 100%);
+  background: linear-gradient(62deg, #ac5f20 0%, #f6c74f 100%);
   -webkit-background-clip: text;
 }
 
 .icon-big {
   position: absolute;
   right: 1rem;
-  top: 1rem;
-  font-size: 7rem;
+  top: 1.5rem;
+  font-size: 7.5rem;
   color: #e4505d;
   opacity: 0.1;
 }

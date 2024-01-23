@@ -1,0 +1,52 @@
+.section-experience {
+  padding: 5rem 3rem;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background: #808080;
+  top: 0;
+  left: 0;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.container {
+  padding: 1rem;
+  position: relative;
+  width: 95%;
+  margin-left: 3rem;
+}
+
+.timeline-point {
+  background-color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -5rem;
+  top: 10rem;
+}
+
+.text-box {
+  padding: 0 0.5rem;
+  position: relative;
+  border-radius: 6px;
+  font-size: 1.5rem;
+}
+
+.duration-label {
+  display: inline-block;
+  /* background-color: #FEAB45; */
+  background: linear-gradient(to right bottom, #feab45 0, #e4505d);
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: 2px;
+}
