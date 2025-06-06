@@ -43,7 +43,6 @@ mesh.position.x = 2;
 scene.add(mesh);
 
 // Sizes
-
 const sizes = {
   width: window.innerWidth,
 
@@ -52,26 +51,19 @@ const sizes = {
 
 window.addEventListener('resize', () => {
   // Update sizes
-
   sizes.width = window.innerWidth;
-
   sizes.height = window.innerHeight;
 
   // Update camera
-
   camera.aspect = sizes.width / sizes.height;
-
   camera.updateProjectionMatrix();
 
   // Update renderer
-
   renderer.setSize(sizes.width, sizes.height);
-
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 });
 
 // Camera
-
 const camera = new THREE.PerspectiveCamera(
   75,
   sizes.width / sizes.height,
@@ -84,7 +76,6 @@ camera.position.z = 3;
 scene.add(camera);
 
 // Renderer
-
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
@@ -96,21 +87,17 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.setClearColor(0x010101);
 
 // Animate
-
 const clock = new THREE.Clock();
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   mesh.rotation.y = elapsedTime / 20;
-  mesh.rotation.x = elapsedTime / 20;
 
   // Render
-
   renderer.render(scene, camera);
 
   // Call tick again on the next frame
-
   window.requestAnimationFrame(tick);
 };
 
@@ -127,7 +114,7 @@ const nextBtn = document.querySelector('.next');
 let currItem = 1;
 
 function sliderShow() {
-  slider[currItem].style.transform = `translate(0,-50%)`;
+  slider[currItem].style.transform = `translate(-10%,-50%)`;
   slider[currItem].style.zIndex = 1;
   slider[currItem].style.filter = 'none';
   slider[currItem].style.opacity = 1;
@@ -141,7 +128,6 @@ function sliderShow() {
     }) perspective(20px) rotateY(-1deg)`;
     slider[i].style.zIndex = `${-counter}`;
     slider[i].style.filter = 'brightness(50%)';
-    slider[i].style.opacity = counter > 2 ? 0 : 1;
   }
   counter = 0;
   for (let i = currItem - 1; i >= 0; i--) {
@@ -151,7 +137,6 @@ function sliderShow() {
     }) perspective(20px) rotateY(1deg)`;
     slider[i].style.zIndex = `${-counter}`;
     slider[i].style.filter = 'brightness(50%)';
-    slider[i].style.opacity = counter > 2 ? 0 : 1;
   }
 }
 
@@ -159,7 +144,6 @@ sliderShow();
 
 nextBtn.addEventListener('click', () => {
   if (currItem != slider.length) {
-    console.log('clicked');
     currItem++;
     sliderShow();
   }
@@ -167,8 +151,14 @@ nextBtn.addEventListener('click', () => {
 
 prevBtn.addEventListener('click', () => {
   if (currItem != 0) {
-    console.log('clicked');
     currItem--;
     sliderShow();
   }
+});
+
+const fades = document.querySelectorAll('.reference-fade');
+fades.forEach((fadeEl) => {
+  fadeEl.addEventListener('click', (e) => {
+    console.log('I have been scrolled');
+  });
 });
